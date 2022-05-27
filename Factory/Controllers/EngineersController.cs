@@ -68,6 +68,9 @@ namespace Factory.Controllers
     public ActionResult AddMachine(int id)
     {
         var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+        var status = new List<SelectListItem>();
+        status.Add(new SelectListItem() { Text = "Repairing", Value = "Repairing" });
+        status.Add(new SelectListItem() { Text = "Running", Value = "Running" });
         ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
         return View(thisEngineer);
     }
