@@ -1,0 +1,17 @@
+@model Factory.Models.Machine
+
+<div class="container">
+<h4>Add a new Machine</h4>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+
+  @Html.Label("Select Engineer")
+  @Html.DropDownList("EngineerId")
+
+  <input class="myCssClass" type="submit" value="Add a new Machine" />
+}
+<p>@Html.ActionLink("Show all Machines", "Index", null, null , new {@class="myCssClass"})</p>
+<p>@Html.ActionLink("Home", "Index", "Home", null , new {@class="myCssClass"})</p>
+</div>

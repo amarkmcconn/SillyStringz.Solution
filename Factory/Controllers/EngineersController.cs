@@ -22,7 +22,6 @@ namespace Factory.Controllers
     }
     public ActionResult Create()
     {
-      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
       return View();
     }
     [HttpPost]
@@ -36,13 +35,13 @@ namespace Factory.Controllers
     {
       var thisEngineer = _db.Engineers
           .Include(engineer => engineer.JoinEntities)
-          .ThenInclude(join => join.machine)
+          .ThenInclude(join => join.Machine)
           .FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(thisEngineer);
     }
     public ActionResult Edit(int id)
     {
-      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
+      // ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
       var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(thisEngineer);
     }
