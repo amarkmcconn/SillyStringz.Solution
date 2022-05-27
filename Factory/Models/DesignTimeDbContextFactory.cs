@@ -8,7 +8,7 @@ namespace Factory.Models
   public class FactoryContextFactory : IDesignTimeDbContextFactory<FactoryContext>
   {
 
-    ToDoListContext IDesignTimeDbContextFactory<FactoryContext>.CreateDbContext(string[] args)
+    FactoryContext IDesignTimeDbContextFactory<FactoryContext>.CreateDbContext(string[] args)
     {
       IConfigurationRoot configuration = new ConfigurationBuilder()
           .SetBasePath(Directory.GetCurrentDirectory())

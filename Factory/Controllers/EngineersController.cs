@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using Project.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Factory.Models;
 
-namespace Engineers.Controllers
+namespace Factory.Controllers
 {
   public class EngineersController : Controller
   {
@@ -15,7 +17,7 @@ namespace Engineers.Controllers
     }
     public ActionResult Index()
     {
-      List<Engineers> model = _db.Engineers.ToList();
+      List<Engineer> model = _db.Engineers.ToList();
       return View(model);
     }
     public ActionResult Create()
