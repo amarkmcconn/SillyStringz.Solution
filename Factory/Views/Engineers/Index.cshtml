@@ -9,11 +9,12 @@
   <h2>No Engineers have been added yet!</h2>
 }
 
-<ul>
+<ul></ul>
   @foreach(Engineer engineer in Model)
   {
     <li>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })</li>
   }
 </ul>
+<p>@Html.ActionLink("Add a new Engineer", "Create", null, null,  new {@class = "myCssClass"})</p>
 <p>@Html.ActionLink("Home", "Index", "Home", null,  new {@class = "myCssClass"})</p>
 </div>
