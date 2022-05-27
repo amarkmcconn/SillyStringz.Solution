@@ -23,3 +23,13 @@
 h1, h2, h3, h4 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+body {
+  background-color: #5f8c81;
+}
+
+img {
+  border: 20px solid black;
+  border-style: double;
+  margin: 1px;
+}

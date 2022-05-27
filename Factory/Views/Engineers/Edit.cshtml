@@ -10,10 +10,10 @@
   @Html.HiddenFor(model => model.EngineerId)
 
   @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
+  @Html.EditorFor(model => model.Name, new { required = "required" })
 
   @Html.LabelFor(model => model.DateHired)
-  @Html.TextBoxFor(model => model.DateHired)
+  @Html.TextBoxFor(model => model.DateHired, new { type = "date", required = "required" })
 
   <input class = "myCssClass" type="submit" value="Save" />
 }
