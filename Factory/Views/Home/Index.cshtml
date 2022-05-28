@@ -1,6 +1,24 @@
+@using Factory.Models;
+
 <div class="container">
   <h1><a href="https://fontmeme.com/i-hate-youngboy-font/"><img src="https://fontmeme.com/permalink/220527/37be2510edd8dcc68a077339a1507f38.png" alt="i-hate-youngboy-font" border="0"></a><h1>
-    <img src=img/string.jpg>
-  <p>@Html.ActionLink("Engineer List", "Index", "Engineers", null, new {@class = "myCssClass"})</p>
-  <p>@Html.ActionLink("Machine List", "Index", "Machines", null, new {@class = "myCssClass"})</p> 
+  <div class="row">
+    <div class="column">
+      <img src=img/string.jpg>
+      <p>@Html.ActionLink("Engineer List", "Index", "Engineers", null, new {@class = "myCssClass"})</p>
+      <p>@Html.ActionLink("Machine List", "Index", "Machines", null, new {@class = "myCssClass"})</p>
+    </div>
+    <div class="column">
+      <h4>Engineers</h4>
+      @foreach (Engineer engineer in Model.Engineer)
+      {
+        <li>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })</li>
+      }
+      <h4>Machines</h4>
+      @foreach (Machine machine in Model.Machine)
+      {
+        <li>@Html.ActionLink($"{machine.Name}", "Details", new { id = machine.MachineId })</li>
+      }
+    </div>
+  </div>
 </div>
