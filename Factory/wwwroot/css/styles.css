@@ -1,9 +1,10 @@
 .myCssClass {
   font-family: Verdana, Helvetica, Arial, sans-serif;
   font-size: 12px;
+  background-color: #0c0224;
 
-  color: #1a0941;
-  color: rgba(116, 44, 44, 0.505);
+  color: solid #0c0224;
+  color:  #5f8c81;
   width: auto;
 
   padding: 8px 12px;
@@ -32,4 +33,33 @@ img {
   border: 20px solid black;
   border-style: double;
   margin: 1px;
+}
+
+.center {
+  text-align: center;
+  list-style-position: inside;
+}
+
+ol.center {
+ text-align: left;
+}
+
+li {
+  font-size: large;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }

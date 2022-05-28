@@ -9,16 +9,20 @@
       <p>@Html.ActionLink("Machine List", "Index", "Machines", null, new {@class = "myCssClass"})</p>
     </div>
     <div class="column">
-      <h4>Engineers</h4>
-      @foreach (Engineer engineer in Model.Engineer)
+      <h4 align="center">Engineers</h4>
+      <ol class="center">
+      @foreach (Engineer engineer in @ViewBag.Engineers)
       {
-        <li>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })</li>
+        <li>@Html.ActionLink($"{engineer.Name}", "Details", "Engineers", new { id = engineer.EngineerId })</li>
       }
-      <h4>Machines</h4>
-      @foreach (Machine machine in Model.Machine)
+      </ol>
+      <h4 align="center">Machines</h4>
+      <ol class="center">
+      @foreach (Machine machine in @ViewBag.Machines)
       {
-        <li>@Html.ActionLink($"{machine.Name}", "Details", new { id = machine.MachineId })</li>
+        <li>@Html.ActionLink($"{machine.Name}", "Details", "Machines", new { id = machine.MachineId })</li>
       }
+      </ol>
     </div>
   </div>
 </div>
