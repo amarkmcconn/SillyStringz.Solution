@@ -2,7 +2,7 @@
 
 ## By **Mark McConnell** 👨
 
-### This is an MVC application that will allow a Factory to keep track of engineers and machines.
+### This is an MVC application that will allow a Factory to keep track of engineers and machines
 
 ## Technologies Used 🖥️
 
@@ -20,21 +20,27 @@
 
 This is an MVC web application for a factory to manage their engineers, and the machines they are licensed to fix. The factory manager will be able to add a list of engineers, a list of machines, and specify which engineers are licensed to repair which machines. There is a many-to-many relationship between Engineers and Machines. An engineer can be licensed to repair (belong to) many machines (such as the Dreamweaver, the Bubblewrappinator, and the Laughbox) and a machine can have many engineers licensed to repair it.
 
+![Alt text](/Factory/wwwroot/img/Picture2.png)
+
 ## Setup/Installation Requirements 🖊️
 
 * _Clone this repo: <https://github.com/amarkmcconn/SillyStringz.Solution>_
-* _Enter the new directory using the command ```cd SillyStringz.Solution```_
+* _Enter the new directory using the command ```cd SillyStringz.Solution```
 * _In the root directory, confirm there is a .gitignore file_
-* _add: 
+* _add:
+
 ```
 */obj,
 */bin
 *.vscode
 */appsettings.json
 ```
+
  to the .gitignore file. It will keep your repository clean of unnecessary files and protect your database from unauthorized access_
+
 * _Create an appsetting.json file at the root directory_*
 * Open the appsetting.json file and enter:
+
 ```
 { 
   "ConnectionStrings": { 
@@ -42,6 +48,7 @@ This is an MVC web application for a factory to manage their engineers, and the 
   } 
 }
 ```
+
 * _run ```git add .gitignore```
 * _commit your changes_
 * _To ensure the project will run correctly,_
